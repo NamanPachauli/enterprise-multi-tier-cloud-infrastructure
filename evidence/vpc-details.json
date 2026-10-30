@@ -1,0 +1,57 @@
+{
+    "Vpcs": [
+        {
+            "OwnerId": "000000000000",
+            "InstanceTenancy": "default",
+            "Ipv6CidrBlockAssociationSet": [],
+            "CidrBlockAssociationSet": [
+                {
+                    "AssociationId": "vpc-cidr-assoc-b80681ea5cbebc7fa",
+                    "CidrBlock": "172.31.0.0/16",
+                    "CidrBlockState": {
+                        "State": "associated"
+                    }
+                }
+            ],
+            "IsDefault": true,
+            "Tags": [],
+            "VpcId": "vpc-d17e579d236aa0abd",
+            "State": "available",
+            "CidrBlock": "172.31.0.0/16",
+            "DhcpOptionsId": "default"
+        },
+        {
+            "OwnerId": "000000000000",
+            "InstanceTenancy": "default",
+            "Ipv6CidrBlockAssociationSet": [],
+            "CidrBlockAssociationSet": [
+                {
+                    "AssociationId": "vpc-cidr-assoc-9c3e224bf8be4d7a8",
+                    "CidrBlock": "10.0.0.0/16",
+                    "CidrBlockState": {
+                        "State": "associated"
+                    }
+                }
+            ],
+            "IsDefault": false,
+            "Tags": [
+                {
+                    "Key": "Environment",
+                    "Value": "local"
+                },
+                {
+                    "Key": "ManagedBy",
+                    "Value": "Terraform"
+                },
+                {
+                    "Key": "Name",
+                    "Value": "enterprise-mti-vpc"
+                }
+            ],
+            "VpcId": "vpc-fc90346a7bf06e0cc",
+            "State": "available",
+            "CidrBlock": "10.0.0.0/16",
+            "DhcpOptionsId": "default"
+        }
+    ]
+}

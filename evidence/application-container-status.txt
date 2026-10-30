@@ -1,0 +1,5 @@
+NAME                        IMAGE                                            COMMAND                  SERVICE      CREATED         STATUS                   PORTS
+enterprise-mti-app          enterprise-multi-tier-cloud-infrastructure-app   "python main.py"         app          3 minutes ago   Up 3 minutes (healthy)   8080/tcp
+enterprise-mti-database     postgres:16-alpine                               "docker-entrypoint.s…"   database     3 minutes ago   Up 3 minutes (healthy)   5432/tcp
+enterprise-mti-localstack   localstack/localstack:4.8.1                      "docker-entrypoint.sh"   localstack   3 minutes ago   Up 3 minutes (healthy)   127.0.0.1:4568->4566/tcp
+enterprise-mti-nginx        nginx:1.27-alpine                                "/docker-entrypoint.…"   nginx        3 minutes ago   Up 3 minutes (healthy)   127.0.0.1:8086->80/tcp

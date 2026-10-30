@@ -1,0 +1,148 @@
+{
+    "RouteTables": [
+        {
+            "Associations": [
+                {
+                    "Main": true,
+                    "RouteTableAssociationId": "rtbassoc-52b576e9cd5a08657",
+                    "RouteTableId": "rtb-f01fef50816fdaa15",
+                    "AssociationState": {
+                        "State": "associated"
+                    }
+                }
+            ],
+            "RouteTableId": "rtb-f01fef50816fdaa15",
+            "Routes": [
+                {
+                    "DestinationCidrBlock": "172.31.0.0/16",
+                    "GatewayId": "local",
+                    "Origin": "CreateRouteTable",
+                    "State": "active"
+                }
+            ],
+            "Tags": [],
+            "VpcId": "vpc-d17e579d236aa0abd",
+            "OwnerId": "000000000000"
+        },
+        {
+            "Associations": [
+                {
+                    "Main": true,
+                    "RouteTableAssociationId": "rtbassoc-21a853640b0174da3",
+                    "RouteTableId": "rtb-50ce979b981741eca",
+                    "AssociationState": {
+                        "State": "associated"
+                    }
+                }
+            ],
+            "RouteTableId": "rtb-50ce979b981741eca",
+            "Routes": [
+                {
+                    "DestinationCidrBlock": "10.0.0.0/16",
+                    "GatewayId": "local",
+                    "Origin": "CreateRouteTable",
+                    "State": "active"
+                }
+            ],
+            "Tags": [],
+            "VpcId": "vpc-fc90346a7bf06e0cc",
+            "OwnerId": "000000000000"
+        },
+        {
+            "Associations": [
+                {
+                    "Main": false,
+                    "RouteTableAssociationId": "rtbassoc-80335ff15bd3e7c00",
+                    "RouteTableId": "rtb-6fbaa261e8c3b3843",
+                    "SubnetId": "subnet-f6cfd574a28a35d99",
+                    "AssociationState": {
+                        "State": "associated"
+                    }
+                }
+            ],
+            "RouteTableId": "rtb-6fbaa261e8c3b3843",
+            "Routes": [
+                {
+                    "DestinationCidrBlock": "10.0.0.0/16",
+                    "GatewayId": "local",
+                    "Origin": "CreateRouteTable",
+                    "State": "active"
+                }
+            ],
+            "Tags": [
+                {
+                    "Key": "Name",
+                    "Value": "enterprise-mti-private-data-route-table"
+                }
+            ],
+            "VpcId": "vpc-fc90346a7bf06e0cc",
+            "OwnerId": "000000000000"
+        },
+        {
+            "Associations": [
+                {
+                    "Main": false,
+                    "RouteTableAssociationId": "rtbassoc-c97a96559b2d27f7a",
+                    "RouteTableId": "rtb-69a683f0cafb6fa24",
+                    "SubnetId": "subnet-685543d395fdd6d3b",
+                    "AssociationState": {
+                        "State": "associated"
+                    }
+                }
+            ],
+            "RouteTableId": "rtb-69a683f0cafb6fa24",
+            "Routes": [
+                {
+                    "DestinationCidrBlock": "10.0.0.0/16",
+                    "GatewayId": "local",
+                    "Origin": "CreateRouteTable",
+                    "State": "active"
+                },
+                {
+                    "DestinationCidrBlock": "0.0.0.0/0",
+                    "GatewayId": "igw-af3da7060eef5e6bc",
+                    "Origin": "CreateRoute",
+                    "State": "active"
+                }
+            ],
+            "Tags": [
+                {
+                    "Key": "Name",
+                    "Value": "enterprise-mti-public-route-table"
+                }
+            ],
+            "VpcId": "vpc-fc90346a7bf06e0cc",
+            "OwnerId": "000000000000"
+        },
+        {
+            "Associations": [
+                {
+                    "Main": false,
+                    "RouteTableAssociationId": "rtbassoc-252c4f60a046c518a",
+                    "RouteTableId": "rtb-8afc825dd99960dcb",
+                    "SubnetId": "subnet-a200a386e1f251e5f",
+                    "AssociationState": {
+                        "State": "associated"
+                    }
+                }
+            ],
+            "RouteTableId": "rtb-8afc825dd99960dcb",
+            "Routes": [
+                {
+                    "DestinationCidrBlock": "10.0.0.0/16",
+                    "GatewayId": "local",
+                    "Origin": "CreateRouteTable",
+                    "State": "active"
+                }
+            ],
+            "Tags": [
+                {
+                    "Key": "Name",
+                    "Value": "enterprise-mti-private-app-route-table"
+                }
+            ],
+            "VpcId": "vpc-fc90346a7bf06e0cc",
+            "OwnerId": "000000000000"
+        }
+    ]
+}

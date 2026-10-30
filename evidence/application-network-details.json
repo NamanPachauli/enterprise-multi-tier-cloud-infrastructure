@@ -1,0 +1,922 @@
+[
+    {
+        "Id": "cae2d82e0370b7be05149258171447024a6b835f29219cd054111b3e14f4dc6a",
+        "Created": "2026-10-30T09:45:51.171796879Z",
+        "Path": "/docker-entrypoint.sh",
+        "Args": [
+            "nginx",
+            "-g",
+            "daemon off;"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 77766,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-10-30T09:46:16.489064245Z",
+            "FinishedAt": "0001-01-01T00:00:00Z",
+            "Health": {
+                "Status": "healthy",
+                "FailingStreak": 0,
+                "Log": [
+                    {
+                        "Start": "2026-10-30T09:48:48.354795263Z",
+                        "End": "2026-10-30T09:48:48.49266603Z",
+                        "ExitCode": 0,
+                        "Output": "nginx healthy"
+                    },
+                    {
+                        "Start": "2026-10-30T09:48:58.493984296Z",
+                        "End": "2026-10-30T09:48:58.611128081Z",
+                        "ExitCode": 0,
+                        "Output": "nginx healthy"
+                    },
+                    {
+                        "Start": "2026-10-30T09:49:08.607686701Z",
+                        "End": "2026-10-30T09:49:08.777346538Z",
+                        "ExitCode": 0,
+                        "Output": "nginx healthy"
+                    },
+                    {
+                        "Start": "2026-10-30T09:49:18.790201539Z",
+                        "End": "2026-10-30T09:49:18.889270358Z",
+                        "ExitCode": 0,
+                        "Output": "nginx healthy"
+                    },
+                    {
+                        "Start": "2026-10-30T09:49:28.893051977Z",
+                        "End": "2026-10-30T09:49:29.064147562Z",
+                        "ExitCode": 0,
+                        "Output": "nginx healthy"
+                    }
+                ]
+            }
+        },
+        "Image": "sha256:65645c7bb6a0661892a8b03b89d0743208a18dd2f3f17a54ef4b76fb8e2f2a10",
+        "ResolvConfPath": "/var/lib/docker/containers/cae2d82e0370b7be05149258171447024a6b835f29219cd054111b3e14f4dc6a/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/cae2d82e0370b7be05149258171447024a6b835f29219cd054111b3e14f4dc6a/hostname",
+        "HostsPath": "/var/lib/docker/containers/cae2d82e0370b7be05149258171447024a6b835f29219cd054111b3e14f4dc6a/hosts",
+        "LogPath": "/var/lib/docker/containers/cae2d82e0370b7be05149258171447024a6b835f29219cd054111b3e14f4dc6a/cae2d82e0370b7be05149258171447024a6b835f29219cd054111b3e14f4dc6a-json.log",
+        "Name": "/enterprise-mti-nginx",
+        "RestartCount": 0,
+        "Driver": "overlayfs",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "C:\\Users\\PIS\\enterprise-multi-tier-cloud-infrastructure\\nginx\\nginx.conf:/etc/nginx/nginx.conf:ro"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "enterprise-multi-tier-cloud-infrastructure_app_net",
+            "PortBindings": {
+                "80/tcp": [
+                    {
+                        "HostIp": "127.0.0.1",
+                        "HostPort": "8086"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": [],
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/acpi",
+                "/proc/asound",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/sys/devices/virtual/powercap",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "Storage": {
+            "RootFS": {
+                "Snapshot": {
+                    "Name": "overlayfs"
+                }
+            }
+        },
+        "Mounts": [
+            {
+                "Type": "bind",
+                "Source": "C:\\Users\\PIS\\enterprise-multi-tier-cloud-infrastructure\\nginx\\nginx.conf",
+                "Destination": "/etc/nginx/nginx.conf",
+                "Mode": "ro",
+                "RW": false,
+                "Propagation": "rprivate"
+            }
+        ],
+        "Config": {
+            "Hostname": "cae2d82e0370",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "ExposedPorts": {
+                "80/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "NGINX_VERSION=1.27.5",
+                "PKG_RELEASE=1",
+                "DYNPKG_RELEASE=1",
+                "NJS_VERSION=0.8.10",
+                "NJS_RELEASE=1"
+            ],
+            "Cmd": [
+                "nginx",
+                "-g",
+                "daemon off;"
+            ],
+            "Healthcheck": {
+                "Test": [
+                    "CMD-SHELL",
+                    "wget -qO- http://127.0.0.1/nginx-health || exit 1"
+                ],
+                "Interval": 10000000000,
+                "Timeout": 5000000000,
+                "Retries": 5
+            },
+            "Image": "nginx:1.27-alpine",
+            "Volumes": null,
+            "WorkingDir": "/",
+            "Entrypoint": [
+                "/docker-entrypoint.sh"
+            ],
+            "Labels": {
+                "com.docker.compose.config-hash": "ec4f45f4245ee076827a23d81242097256d693facdf26b01e916a8e35ca5f3d8",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.depends_on": "app:service_healthy:false",
+                "com.docker.compose.image": "sha256:65645c7bb6a0661892a8b03b89d0743208a18dd2f3f17a54ef4b76fb8e2f2a10",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "enterprise-multi-tier-cloud-infrastructure",
+                "com.docker.compose.project.config_files": "C:\\Users\\PIS\\enterprise-multi-tier-cloud-infrastructure\\docker-compose.yml",
+                "com.docker.compose.project.working_dir": "C:\\Users\\PIS\\enterprise-multi-tier-cloud-infrastructure",
+                "com.docker.compose.service": "nginx",
+                "com.docker.compose.version": "5.1.4",
+                "maintainer": "NGINX Docker Maintainers \u003cdocker-maint@nginx.com\u003e"
+            },
+            "StopSignal": "SIGQUIT",
+            "StopTimeout": 1
+        },
+        "NetworkSettings": {
+            "SandboxID": "20fd604b6d52ea65b2cbed7a712fca240996c838171607ebb8f6dffd2c83bbff",
+            "SandboxKey": "/var/run/docker/netns/20fd604b6d52",
+            "Ports": {
+                "80/tcp": [
+                    {
+                        "HostIp": "127.0.0.1",
+                        "HostPort": "8086"
+                    }
+                ]
+            },
+            "Networks": {
+                "enterprise-multi-tier-cloud-infrastructure_app_net": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "enterprise-mti-nginx",
+                        "nginx"
+                    ],
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "59f8cd7df9169f7384e2d3cb1296e2a6f9191035069df4442d730381d6982ec9",
+                    "EndpointID": "d091b9185e3f25d26ee39f92cbdbdc0d8c91e0279d9f8633792084d0c5c32993",
+                    "Gateway": "",
+                    "IPAddress": "192.168.144.3",
+                    "MacAddress": "ae:00:9e:5a:d6:48",
+                    "IPPrefixLen": 20,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": [
+                        "enterprise-mti-nginx",
+                        "nginx",
+                        "cae2d82e0370"
+                    ]
+                },
+                "enterprise-multi-tier-cloud-infrastructure_public_net": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "enterprise-mti-nginx",
+                        "nginx"
+                    ],
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "298adc49b4facea3e00687705b3b681a650cae3c851a4d162c87d738117a54cb",
+                    "EndpointID": "2a7dc770a168552b83d41f7a9d6f64ce3a30f6f515ed35bf73331cd34acded0a",
+                    "Gateway": "192.168.176.1",
+                    "IPAddress": "192.168.176.2",
+                    "MacAddress": "be:0f:ad:e1:cd:e4",
+                    "IPPrefixLen": 20,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": [
+                        "enterprise-mti-nginx",
+                        "nginx",
+                        "cae2d82e0370"
+                    ]
+                }
+            }
+        },
+        "ImageManifestDescriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:62223d644fa234c3a1cc785ee14242ec47a77364226f1c811d2f669f96dc2ac8",
+            "size": 2495,
+            "annotations": {
+                "com.docker.official-images.bashbrew.arch": "amd64",
+                "org.opencontainers.image.base.digest": "sha256:816d6a9736a3ccb74b5b0eb915c4ffb37bf6b7a98e7aaa715001ce3235a8a019",
+                "org.opencontainers.image.base.name": "nginx:1.27.5-alpine-slim",
+                "org.opencontainers.image.created": "2025-04-16T17:07:33Z",
+                "org.opencontainers.image.revision": "eaf8875a1967d24cea6ed8b37109075e39ed9e43",
+                "org.opencontainers.image.source": "https://github.com/nginx/docker-nginx.git#eaf8875a1967d24cea6ed8b37109075e39ed9e43:mainline/alpine",
+                "org.opencontainers.image.url": "https://hub.docker.com/_/nginx",
+                "org.opencontainers.image.version": "1.27.5-alpine"
+            },
+            "platform": {
+                "architecture": "amd64",
+                "os": "linux"
+            }
+        }
+    },
+    {
+        "Id": "32f307896497adc4a094f1100afd185792924906e2b544bed179d629914624ab",
+        "Created": "2026-10-30T09:45:50.516672508Z",
+        "Path": "python",
+        "Args": [
+            "main.py"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 77591,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-10-30T09:46:05.51867054Z",
+            "FinishedAt": "0001-01-01T00:00:00Z",
+            "Health": {
+                "Status": "healthy",
+                "FailingStreak": 0,
+                "Log": [
+                    {
+                        "Start": "2026-10-30T09:48:50.259762317Z",
+                        "End": "2026-10-30T09:48:50.467459875Z",
+                        "ExitCode": 0,
+                        "Output": ""
+                    },
+                    {
+                        "Start": "2026-10-30T09:49:00.46855045Z",
+                        "End": "2026-10-30T09:49:00.688832619Z",
+                        "ExitCode": 0,
+                        "Output": ""
+                    },
+                    {
+                        "Start": "2026-10-30T09:49:10.685747313Z",
+                        "End": "2026-10-30T09:49:11.04328537Z",
+                        "ExitCode": 0,
+                        "Output": ""
+                    },
+                    {
+                        "Start": "2026-10-30T09:49:21.044872147Z",
+                        "End": "2026-10-30T09:49:21.503006863Z",
+                        "ExitCode": 0,
+                        "Output": ""
+                    },
+                    {
+                        "Start": "2026-10-30T09:49:31.508277756Z",
+                        "End": "2026-10-30T09:49:31.889680962Z",
+                        "ExitCode": 0,
+                        "Output": ""
+                    }
+                ]
+            }
+        },
+        "Image": "sha256:baf62697be3e3837233fa2240fb0d225ec781a3fc8f1941aeeba8dc8fd2bf814",
+        "ResolvConfPath": "/var/lib/docker/containers/32f307896497adc4a094f1100afd185792924906e2b544bed179d629914624ab/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/32f307896497adc4a094f1100afd185792924906e2b544bed179d629914624ab/hostname",
+        "HostsPath": "/var/lib/docker/containers/32f307896497adc4a094f1100afd185792924906e2b544bed179d629914624ab/hosts",
+        "LogPath": "/var/lib/docker/containers/32f307896497adc4a094f1100afd185792924906e2b544bed179d629914624ab/32f307896497adc4a094f1100afd185792924906e2b544bed179d629914624ab-json.log",
+        "Name": "/enterprise-mti-app",
+        "RestartCount": 0,
+        "Driver": "overlayfs",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "enterprise-multi-tier-cloud-infrastructure_app_net",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": [],
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/acpi",
+                "/proc/asound",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/sys/devices/virtual/powercap",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "Storage": {
+            "RootFS": {
+                "Snapshot": {
+                    "Name": "overlayfs"
+                }
+            }
+        },
+        "Mounts": [],
+        "Config": {
+            "Hostname": "32f307896497",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "ExposedPorts": {
+                "8080/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "DB_HOST=database",
+                "DB_NAME=enterprise_db",
+                "DB_USER=app_user",
+                "DB_PASSWORD=local_dev_only",
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305",
+                "PYTHON_VERSION=3.12.16",
+                "PYTHON_SHA256=b5796915dc45ff745cfb4e990a7e7c93d6f546328a102ce31448d69ebc37575c"
+            ],
+            "Cmd": [
+                "python",
+                "main.py"
+            ],
+            "Healthcheck": {
+                "Test": [
+                    "CMD",
+                    "python",
+                    "-c",
+                    "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8080/health')"
+                ],
+                "Interval": 10000000000,
+                "Timeout": 5000000000,
+                "Retries": 5
+            },
+            "Image": "enterprise-multi-tier-cloud-infrastructure-app",
+            "Volumes": null,
+            "WorkingDir": "/app",
+            "Entrypoint": null,
+            "Labels": {
+                "com.docker.compose.config-hash": "74477f600135c9730bdd404dfa4ec60fb0a149771573989a0cc146fafcdf57bc",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.depends_on": "database:service_healthy:false",
+                "com.docker.compose.image": "sha256:baf62697be3e3837233fa2240fb0d225ec781a3fc8f1941aeeba8dc8fd2bf814",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "enterprise-multi-tier-cloud-infrastructure",
+                "com.docker.compose.project.config_files": "C:\\Users\\PIS\\enterprise-multi-tier-cloud-infrastructure\\docker-compose.yml",
+                "com.docker.compose.project.working_dir": "C:\\Users\\PIS\\enterprise-multi-tier-cloud-infrastructure",
+                "com.docker.compose.service": "app",
+                "com.docker.compose.version": "5.1.4"
+            },
+            "StopTimeout": 1
+        },
+        "NetworkSettings": {
+            "SandboxID": "3ade686d8ecb6581fe3f29ba71ba92f3435f5f16036ae8cdbcda2f6ed39799ed",
+            "SandboxKey": "/var/run/docker/netns/3ade686d8ecb",
+            "Ports": {
+                "8080/tcp": null
+            },
+            "Networks": {
+                "enterprise-multi-tier-cloud-infrastructure_app_net": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "enterprise-mti-app",
+                        "app"
+                    ],
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "59f8cd7df9169f7384e2d3cb1296e2a6f9191035069df4442d730381d6982ec9",
+                    "EndpointID": "6c900c6c17bfa898d4dc8848fc8144d7d91444fd03afe00e94b4132802774bb0",
+                    "Gateway": "",
+                    "IPAddress": "192.168.144.2",
+                    "MacAddress": "e6:c5:ed:fd:bc:dc",
+                    "IPPrefixLen": 20,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": [
+                        "enterprise-mti-app",
+                        "app",
+                        "32f307896497"
+                    ]
+                },
+                "enterprise-multi-tier-cloud-infrastructure_data_net": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "enterprise-mti-app",
+                        "app"
+                    ],
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "12e35bf64572a084b269fe9704dd541e068d74903e553f6b31dad28c06fdd22e",
+                    "EndpointID": "db0b9125e4722b167f3f340b0643cf9b4f6e20091d9220007dc06280dcec4bb0",
+                    "Gateway": "",
+                    "IPAddress": "192.168.160.3",
+                    "MacAddress": "9a:c8:49:58:f4:d8",
+                    "IPPrefixLen": 20,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": [
+                        "enterprise-mti-app",
+                        "app",
+                        "32f307896497"
+                    ]
+                }
+            }
+        },
+        "ImageManifestDescriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:69674339d091d76db4fd5ab10409fd79f1910a566968671a8e3a9c733f83cf6d",
+            "size": 1810,
+            "platform": {
+                "architecture": "amd64",
+                "os": "linux"
+            }
+        }
+    },
+    {
+        "Id": "3103065b9b6c2a37795d816f1aee683214e485a6aa69c013ae5d7e4206a9443f",
+        "Created": "2026-10-30T09:45:49.985122186Z",
+        "Path": "docker-entrypoint.sh",
+        "Args": [
+            "postgres"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 77312,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-10-30T09:45:53.694097563Z",
+            "FinishedAt": "0001-01-01T00:00:00Z",
+            "Health": {
+                "Status": "healthy",
+                "FailingStreak": 0,
+                "Log": [
+                    {
+                        "Start": "2026-10-30T09:48:46.717602829Z",
+                        "End": "2026-10-30T09:48:46.808473154Z",
+                        "ExitCode": 0,
+                        "Output": "/var/run/postgresql:5432 - accepting connections\n"
+                    },
+                    {
+                        "Start": "2026-10-30T09:48:56.810400933Z",
+                        "End": "2026-10-30T09:48:56.955823167Z",
+                        "ExitCode": 0,
+                        "Output": "/var/run/postgresql:5432 - accepting connections\n"
+                    },
+                    {
+                        "Start": "2026-10-30T09:49:06.959883354Z",
+                        "End": "2026-10-30T09:49:07.052182021Z",
+                        "ExitCode": 0,
+                        "Output": "/var/run/postgresql:5432 - accepting connections\n"
+                    },
+                    {
+                        "Start": "2026-10-30T09:49:17.04995563Z",
+                        "End": "2026-10-30T09:49:17.178188876Z",
+                        "ExitCode": 0,
+                        "Output": "/var/run/postgresql:5432 - accepting connections\n"
+                    },
+                    {
+                        "Start": "2026-10-30T09:49:27.180519471Z",
+                        "End": "2026-10-30T09:49:27.272550177Z",
+                        "ExitCode": 0,
+                        "Output": "/var/run/postgresql:5432 - accepting connections\n"
+                    }
+                ]
+            }
+        },
+        "Image": "sha256:0cefaabd882e42bcb2a2f3dc56d3ce4770560ba62fd7f197f1a2e008fd5731ab",
+        "ResolvConfPath": "/var/lib/docker/containers/3103065b9b6c2a37795d816f1aee683214e485a6aa69c013ae5d7e4206a9443f/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/3103065b9b6c2a37795d816f1aee683214e485a6aa69c013ae5d7e4206a9443f/hostname",
+        "HostsPath": "/var/lib/docker/containers/3103065b9b6c2a37795d816f1aee683214e485a6aa69c013ae5d7e4206a9443f/hosts",
+        "LogPath": "/var/lib/docker/containers/3103065b9b6c2a37795d816f1aee683214e485a6aa69c013ae5d7e4206a9443f/3103065b9b6c2a37795d816f1aee683214e485a6aa69c013ae5d7e4206a9443f-json.log",
+        "Name": "/enterprise-mti-database",
+        "RestartCount": 0,
+        "Driver": "overlayfs",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "enterprise-multi-tier-cloud-infrastructure_postgres_data:/var/lib/postgresql/data:rw"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "enterprise-multi-tier-cloud-infrastructure_data_net",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": [],
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/acpi",
+                "/proc/asound",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/sys/devices/virtual/powercap",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "Storage": {
+            "RootFS": {
+                "Snapshot": {
+                    "Name": "overlayfs"
+                }
+            }
+        },
+        "Mounts": [
+            {
+                "Type": "volume",
+                "Name": "enterprise-multi-tier-cloud-infrastructure_postgres_data",
+                "Source": "/var/lib/docker/volumes/enterprise-multi-tier-cloud-infrastructure_postgres_data/_data",
+                "Destination": "/var/lib/postgresql/data",
+                "Driver": "local",
+                "Mode": "rw",
+                "RW": true,
+                "Propagation": ""
+            }
+        ],
+        "Config": {
+            "Hostname": "3103065b9b6c",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "ExposedPorts": {
+                "5432/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "POSTGRES_PASSWORD=local_dev_only",
+                "POSTGRES_DB=enterprise_db",
+                "POSTGRES_USER=app_user",
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "GOSU_VERSION=1.19",
+                "LANG=en_US.utf8",
+                "PG_MAJOR=16",
+                "PG_VERSION=16.15",
+                "PG_SHA256=c1575341fa7bd40f5274ea465b34390f4dc64cdd0770af327005caaeb9f6b7ed",
+                "DOCKER_PG_LLVM_DEPS=llvm21-dev \t\tclang21",
+                "PGDATA=/var/lib/postgresql/data"
+            ],
+            "Cmd": [
+                "postgres"
+            ],
+            "Healthcheck": {
+                "Test": [
+                    "CMD-SHELL",
+                    "pg_isready -U app_user -d enterprise_db"
+                ],
+                "Interval": 10000000000,
+                "Timeout": 5000000000,
+                "Retries": 5
+            },
+            "Image": "postgres:16-alpine",
+            "Volumes": {
+                "/var/lib/postgresql/data": {}
+            },
+            "WorkingDir": "/",
+            "Entrypoint": [
+                "docker-entrypoint.sh"
+            ],
+            "Labels": {
+                "com.docker.compose.config-hash": "9509fab5fd07a143f019a096272ba2786e4e31e0885defe7fc55ac70ddd418aa",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.depends_on": "",
+                "com.docker.compose.image": "sha256:0cefaabd882e42bcb2a2f3dc56d3ce4770560ba62fd7f197f1a2e008fd5731ab",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "enterprise-multi-tier-cloud-infrastructure",
+                "com.docker.compose.project.config_files": "C:\\Users\\PIS\\enterprise-multi-tier-cloud-infrastructure\\docker-compose.yml",
+                "com.docker.compose.project.working_dir": "C:\\Users\\PIS\\enterprise-multi-tier-cloud-infrastructure",
+                "com.docker.compose.service": "database",
+                "com.docker.compose.version": "5.1.4"
+            },
+            "StopSignal": "SIGINT",
+            "StopTimeout": 1
+        },
+        "NetworkSettings": {
+            "SandboxID": "06befd6bf1ade6f068fbc1801ace18ace888f174c033919a7043298e12cddd50",
+            "SandboxKey": "/var/run/docker/netns/06befd6bf1ad",
+            "Ports": {
+                "5432/tcp": null
+            },
+            "Networks": {
+                "enterprise-multi-tier-cloud-infrastructure_data_net": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "enterprise-mti-database",
+                        "database"
+                    ],
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "12e35bf64572a084b269fe9704dd541e068d74903e553f6b31dad28c06fdd22e",
+                    "EndpointID": "706570cdbef09bec4d96f9572a2e3796c59d6ec6d3af5822e3c983ec5a838912",
+                    "Gateway": "",
+                    "IPAddress": "192.168.160.2",
+                    "MacAddress": "16:83:dc:17:bb:79",
+                    "IPPrefixLen": 20,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": [
+                        "enterprise-mti-database",
+                        "database",
+                        "3103065b9b6c"
+                    ]
+                }
+            }
+        },
+        "ImageManifestDescriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:cbf42f0edc946c0bc1b8eeed62403734e1f25dc67a3491455d07a92fdb558b28",
+            "size": 3054,
+            "annotations": {
+                "com.docker.official-images.bashbrew.arch": "amd64",
+                "org.opencontainers.image.base.digest": "sha256:c26612752c78b18faacd63c7d50f4592c2e7b0f25e0e20e82bd74e465c57ab0d",
+                "org.opencontainers.image.base.name": "alpine:3.24",
+                "org.opencontainers.image.created": "2026-10-21T22:54:59Z",
+                "org.opencontainers.image.revision": "9d15534160ade17f2b6c455a39ee967c49b1937d",
+                "org.opencontainers.image.source": "https://github.com/docker-library/postgres.git#9d15534160ade17f2b6c455a39ee967c49b1937d:16/alpine3.24",
+                "org.opencontainers.image.url": "https://hub.docker.com/_/postgres",
+                "org.opencontainers.image.version": "16.15-alpine3.24"
+            },
+            "platform": {
+                "architecture": "amd64",
+                "os": "linux"
+            }
+        }
+    }
+]

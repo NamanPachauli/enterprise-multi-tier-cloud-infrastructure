@@ -1,0 +1,6 @@
+APPLICATION TEST RESULTS
+========================
+Main application: http://localhost:8086/
+Health endpoint: http://localhost:8086/health
+Database health: http://localhost:8086/db-health
+Metrics through Nginx: Expected HTTP 404

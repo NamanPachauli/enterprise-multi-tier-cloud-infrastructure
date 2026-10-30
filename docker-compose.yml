@@ -1,0 +1,135 @@
+
+
+services:
+
+  localstack:
+    image: localstack/localstack:4.8.1
+    container_name: enterprise-mti-localstack
+    ports:
+      - "127.0.0.1:4568:4566"
+    environment:
+      DEBUG: "0"
+      SERVICES: "ec2,iam,sts,elasticloadbalancing"
+    volumes:
+      - "./localstack-data:/var/lib/localstack"
+    networks:
+      - aws_sim_net
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:4566/_localstack/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  database:
+    image: postgres:16-alpine
+    container_name: enterprise-mti-database
+    environment:
+      POSTGRES_DB: enterprise_db
+      POSTGRES_USER: app_user
+      POSTGRES_PASSWORD: local_dev_only
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - data_net
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U app_user -d enterprise_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  app:
+    build: ./app
+    container_name: enterprise-mti-app
+    environment:
+      DB_HOST: database
+      DB_NAME: enterprise_db
+      DB_USER: app_user
+      DB_PASSWORD: local_dev_only
+    networks:
+      - app_net
+      - data_net
+    depends_on:
+      database:
+        condition: service_healthy
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8080/health')"
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  nginx:
+    image: nginx:1.27-alpine
+    container_name: enterprise-mti-nginx
+    ports:
+      - "127.0.0.1:8086:80"
+    volumes:
+      - "./nginx/nginx.conf:/etc/nginx/nginx.conf:ro"
+    networks:
+      - public_net
+      - app_net
+    depends_on:
+      app:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://127.0.0.1/nginx-health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  prometheus:
+    image: prom/prometheus:v3.5.0
+    container_name: enterprise-mti-prometheus
+    ports:
+      - "127.0.0.1:9095:9090"
+    volumes:
+      - "./monitoring/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro"
+      - "prometheus_data:/prometheus"
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yml"
+      - "--storage.tsdb.path=/prometheus"
+    networks:
+      - app_net
+      - monitoring_net
+      - public_net
+    depends_on:
+      app:
+        condition: service_healthy
+
+  grafana:
+    image: grafana/grafana:12.1.0
+    container_name: enterprise-mti-grafana
+    ports:
+      - "127.0.0.1:3005:3000"
+    environment:
+      GF_SECURITY_ADMIN_USER: admin
+      GF_SECURITY_ADMIN_PASSWORD: local_admin_only
+    volumes:
+      - grafana_data:/var/lib/grafana
+    networks:
+      - monitoring_net
+      - public_net
+    depends_on:
+      - prometheus
+
+volumes:
+  postgres_data:
+  prometheus_data:
+  grafana_data:
+
+networks:
+  aws_sim_net:
+
+  public_net:
+
+  app_net:
+    internal: true
+
+  data_net:
+    internal: true
+
+  monitoring_net:
+    internal: true

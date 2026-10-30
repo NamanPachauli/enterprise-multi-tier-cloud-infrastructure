@@ -1,0 +1,48 @@
+# Security Audit — Enterprise Multi-Tier Cloud Infrastructure
+
+## Environment
+- Platform: Docker Compose
+- Infrastructure: LocalStack simulation
+- Audit type: Local container and network security checks
+- Date: 30 October 2026
+
+## 1. Host Port Exposure
+
+| Service | Host Binding | Result |
+|---|---|---|
+| Nginx | 127.0.0.1:8086 | PASS |
+| Prometheus | 127.0.0.1:9095 | PASS |
+| Grafana | 127.0.0.1:3005 | PASS |
+| LocalStack | 127.0.0.1:4568 | PASS |
+| PostgreSQL | Not published | PASS |
+| Flask App | Not published | PASS |
+
+## 2. HTTP Security Checks
+
+- Nginx /metrics endpoint: HTTP 404 — PASS
+- Application /health endpoint: HTTP 200 — PASS
+- Database /db-health endpoint: HTTP 200 — PASS
+
+The application metrics endpoint is blocked through the public Nginx entry point. Prometheus accesses application metrics directly over the Docker network.
+
+## 3. Docker Network Isolation
+
+| Network | Internal | Result |
+|---|---|---|
+| data_net | true | PASS |
+| app_net | true | PASS |
+| monitoring_net | true | PASS |
+
+## 4. Database Isolation
+
+- PostgreSQL has no published host port.
+- PostgreSQL and Flask application share the internal data_net.
+- Database health endpoint confirms successful database connectivity.
+
+## 5. Audit Conclusion
+
+The tested local Docker configuration passed the listed port exposure, HTTP endpoint, and network isolation checks.
+
+This is a local development security audit. It does not represent a production AWS security assessment or prove that every possible security vulnerability has been eliminated.
+
+Real AWS resources were not created or charged during these local tests.

@@ -1,0 +1,41 @@
+
+# Terraform local files
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfplan
+*.tfvars
+*.tfvars.json
+crash.log
+crash.*.log
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+env/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+credentials/
+
+# LocalStack persistent data
+localstack-data/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# Operating system and editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

@@ -1,0 +1,171 @@
+{
+    "SecurityGroups": [
+        {
+            "GroupId": "sg-573cd40a853922672",
+            "IpPermissionsEgress": [
+                {
+                    "IpProtocol": "-1",
+                    "UserIdGroupPairs": [],
+                    "IpRanges": [
+                        {
+                            "CidrIp": "0.0.0.0/0"
+                        }
+                    ],
+                    "Ipv6Ranges": [],
+                    "PrefixListIds": []
+                }
+            ],
+            "Tags": [],
+            "VpcId": "vpc-d17e579d236aa0abd",
+            "SecurityGroupArn": "arn:aws:ec2:us-east-1:000000000000:security-group/sg-573cd40a853922672",
+            "OwnerId": "000000000000",
+            "GroupName": "default",
+            "Description": "default VPC security group",
+            "IpPermissions": []
+        },
+        {
+            "GroupId": "sg-42ec79febc110cdb7",
+            "IpPermissionsEgress": [
+                {
+                    "IpProtocol": "-1",
+                    "UserIdGroupPairs": [],
+                    "IpRanges": [
+                        {
+                            "CidrIp": "0.0.0.0/0"
+                        }
+                    ],
+                    "Ipv6Ranges": [],
+                    "PrefixListIds": []
+                }
+            ],
+            "Tags": [],
+            "VpcId": "vpc-fc90346a7bf06e0cc",
+            "SecurityGroupArn": "arn:aws:ec2:us-east-1:000000000000:security-group/sg-42ec79febc110cdb7",
+            "OwnerId": "000000000000",
+            "GroupName": "default",
+            "Description": "default VPC security group",
+            "IpPermissions": []
+        },
+        {
+            "GroupId": "sg-f9f382edf0873b010",
+            "IpPermissionsEgress": [],
+            "Tags": [
+                {
+                    "Key": "Name",
+                    "Value": "enterprise-mti-public-sg"
+                },
+                {
+                    "Key": "Tier",
+                    "Value": "public"
+                }
+            ],
+            "VpcId": "vpc-fc90346a7bf06e0cc",
+            "SecurityGroupArn": "arn:aws:ec2:us-east-1:000000000000:security-group/sg-f9f382edf0873b010",
+            "OwnerId": "000000000000",
+            "GroupName": "enterprise-mti-public-sg",
+            "Description": "Security group for public load balancer tier",
+            "IpPermissions": [
+                {
+                    "IpProtocol": "tcp",
+                    "FromPort": 443,
+                    "ToPort": 443,
+                    "UserIdGroupPairs": [],
+                    "IpRanges": [
+                        {
+                            "Description": "Allow HTTPS traffic",
+                            "CidrIp": "0.0.0.0/0"
+                        }
+                    ],
+                    "Ipv6Ranges": [],
+                    "PrefixListIds": []
+                },
+                {
+                    "IpProtocol": "tcp",
+                    "FromPort": 80,
+                    "ToPort": 80,
+                    "UserIdGroupPairs": [],
+                    "IpRanges": [
+                        {
+                            "Description": "Allow HTTP traffic",
+                            "CidrIp": "0.0.0.0/0"
+                        }
+                    ],
+                    "Ipv6Ranges": [],
+                    "PrefixListIds": []
+                }
+            ]
+        },
+        {
+            "GroupId": "sg-8d58c979c76841f21",
+            "IpPermissionsEgress": [],
+            "Tags": [
+                {
+                    "Key": "Name",
+                    "Value": "enterprise-mti-application-sg"
+                },
+                {
+                    "Key": "Tier",
+                    "Value": "private-application"
+                }
+            ],
+            "VpcId": "vpc-fc90346a7bf06e0cc",
+            "SecurityGroupArn": "arn:aws:ec2:us-east-1:000000000000:security-group/sg-8d58c979c76841f21",
+            "OwnerId": "000000000000",
+            "GroupName": "enterprise-mti-application-sg",
+            "Description": "Allow application traffic only from public tier",
+            "IpPermissions": [
+                {
+                    "IpProtocol": "tcp",
+                    "FromPort": 8080,
+                    "ToPort": 8080,
+                    "UserIdGroupPairs": [
+                        {
+                            "Description": "Allow traffic from public tier",
+                            "UserId": "000000000000",
+                            "GroupId": "sg-f9f382edf0873b010"
+                        }
+                    ],
+                    "IpRanges": [],
+                    "Ipv6Ranges": [],
+                    "PrefixListIds": []
+                }
+            ]
+        },
+        {
+            "GroupId": "sg-f63203890c4fa5d34",
+            "IpPermissionsEgress": [],
+            "Tags": [
+                {
+                    "Key": "Name",
+                    "Value": "enterprise-mti-database-sg"
+                },
+                {
+                    "Key": "Tier",
+                    "Value": "private-data"
+                }
+            ],
+            "VpcId": "vpc-fc90346a7bf06e0cc",
+            "SecurityGroupArn": "arn:aws:ec2:us-east-1:000000000000:security-group/sg-f63203890c4fa5d34",
+            "OwnerId": "000000000000",
+            "GroupName": "enterprise-mti-database-sg",
+            "Description": "Allow database traffic only from application tier",
+            "IpPermissions": [
+                {
+                    "IpProtocol": "tcp",
+                    "FromPort": 5432,
+                    "ToPort": 5432,
+                    "UserIdGroupPairs": [
+                        {
+                            "Description": "Allow PostgreSQL from application tier",
+                            "UserId": "000000000000",
+                            "GroupId": "sg-8d58c979c76841f21"
+                        }
+                    ],
+                    "IpRanges": [],
+                    "Ipv6Ranges": [],
+                    "PrefixListIds": []
+                }
+            ]
+        }
+    ]
+}
